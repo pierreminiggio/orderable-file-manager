@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pminiggio/orderable-file-manager#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "add-instance-proto": "github:pminiggio/add-instance-proto"
   }
 }
