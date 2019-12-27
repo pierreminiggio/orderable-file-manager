@@ -1,0 +1,22 @@
+{
+  "name": "orderable-file-manager",
+  "version": "1.0.0",
+  "description": "Handle the front end of displaying, adding, removing, and ordering a list of files",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pminiggio/orderable-file-manager.git"
+  },
+  "author": "Pierre MINIGGIO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pminiggio/orderable-file-manager/issues"
+  },
+  "homepage": "https://github.com/pminiggio/orderable-file-manager#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
