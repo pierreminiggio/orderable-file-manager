@@ -20,7 +20,7 @@ OrderableFileManager.load()
 ></div>
 ```
 
-listFileUrl doit retourner un JSON ressemblant à ça :
+listFileUrl une fois appelée en ajax par la lib doit retourner un JSON ressemblant à ça :
 ```json
 [ 
    { 
