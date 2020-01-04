@@ -3,3 +3,34 @@ Ce package permet de lister, ajouter et supprimer des fichiers en Ajax
 Pour le moment c'est très barebone avec aucun CSS
 
 Par la suite on pourra les ordonner.
+
+Utilisation : 
+```javascript
+const OrderableFileManager = require('orderable-file-manager')
+OrderableFileManager.load()
+```
+
+```html
+<div
+    class="orderable-file-manager" 
+    data-listfiles="[listFileUrl]"
+    data-savefile="[saveFileUrl]"
+></div>
+```
+
+listFileUrl doit retourner un JSON ressemblant à ça :
+```json
+[ 
+   { 
+      "id": 11,
+      "delete_url":"http:\/\/catoon.local:8080\/edsa-dev\/framework\/back\/produits\/ajax\/produit\/fichier\/11\/supprimer",
+      "name":"Profile.pdf",
+      "url":"http:\/\/catoon.local:8080\/edsa-dev\/framework\/public\/files\/ecom\/product\/3\/Profile.pdf"
+   },
+   {
+   		// Fichier suivant
+   }
+]
+```
+
+Et saveFileUrl va recevoir un fichier 'file' pour être traité par votre Back End
