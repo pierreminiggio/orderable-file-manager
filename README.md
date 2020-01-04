@@ -20,12 +20,12 @@ OrderableFileManager.load()
 ```html
 <div
     class="orderable-file-manager" 
-    data-listfiles="[listFileUrl]"
+    data-listfiles="[listFilesUrl]"
     data-savefile="[saveFileUrl]"
 ></div>
 ```
 
-listFileUrl une fois appelée en ajax par la lib doit retourner un JSON ressemblant à ça :
+listFilesUrl une fois appelée en ajax par la lib doit retourner un JSON ressemblant à ça :
 ```json
 [ 
    { 
@@ -57,4 +57,12 @@ OrderableFileManager.getAll()
 Récupérer un élement qui a été chargée par la lib via son ID (ou via 'no-id-[increment]' s'il n'a pas d'id) :
 ```javascript
 OrderableFileManager.get('test')
+```
+
+Alternativement aux data en html, on peut passer les url directement au JS :
+```javascript
+OrderableFileManager.load('.orderable-file-manager', {
+	listUrl: '[listFilesUrl]',
+	saveUrl: '[saveFileUrl]'
+})
 ```
