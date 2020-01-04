@@ -34,3 +34,20 @@ listFileUrl doit retourner un JSON ressemblant à ça :
 ```
 
 Et saveFileUrl va recevoir un fichier 'file' pour être traité par votre Back End
+
+
+
+On peut charger via un autre sélecteur :
+```javascript
+OrderableFileManager.load('.classeexemple')
+```
+
+Récupérer les élements qui ont été chargés par la lib :
+```javascript
+OrderableFileManager.getAll()
+```
+
+Récupérer un élement qui a été chargée par la lib via son ID (ou via 'no-id-[increment]' s'il n'a pas d'id) :
+```javascript
+OrderableFileManager.get('test')
+```
