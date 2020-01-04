@@ -6,6 +6,11 @@ Pour le moment c'est très barebone avec aucun CSS
 
 Par la suite on pourra ordonner les fichiers et utiliser le file manager comme un sélecteur de fichier pour un input html via une popin.
 
+Installation :
+```
+npm install pminiggio/orderable-file-manager
+```
+
 Utilisation : 
 ```javascript
 const OrderableFileManager = require('orderable-file-manager')
