@@ -4,7 +4,7 @@ Pour le moment c'est très barebone avec aucun CSS
 
 <img src="https://miniggiodev.fr/packages/orderable-file-manager/barebone-html.png">
 
-Par la suite on pourra ordonner les fichiers et utiliser le file manager comme file selector.
+Par la suite on pourra ordonner les fichiers et utiliser le file manager comme un sélecteur de fichier pour un input html via une popin.
 
 Utilisation : 
 ```javascript
