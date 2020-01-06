@@ -19,6 +19,7 @@
   "devDependencies": {
     "add-instance-proto": "github:pierreminiggio/add-instance-proto",
     "ajax-as-promise": "github:pierreminiggio/ajax-as-promise",
+    "binary-url-reader": "github:pierreminiggio/binary-url-reader",
     "jest": "^24.9.0"
   }
 }
