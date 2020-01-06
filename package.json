@@ -16,10 +16,12 @@
     "url": "https://github.com/pierreminiggio/orderable-file-manager/issues"
   },
   "homepage": "https://github.com/pierreminiggio/orderable-file-manager#readme",
-  "devDependencies": {
+  "dependencies": {
     "add-instance-proto": "github:pierreminiggio/add-instance-proto",
     "ajax-as-promise": "github:pierreminiggio/ajax-as-promise",
-    "binary-url-reader": "github:pierreminiggio/binary-url-reader",
+    "binary-url-reader": "github:pierreminiggio/binary-url-reader"
+  },
+  "devDependencies": {
     "jest": "^24.9.0"
   }
 }
