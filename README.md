@@ -13,7 +13,7 @@ npm install pierreminiggio/orderable-file-manager
 
 Utilisation : 
 ```javascript
-const OrderableFileManager = require('orderable-file-manager')
+const OrderableFileManager = require('@pierreminiggio/orderable-file-manager')
 OrderableFileManager.load()
 ```
 
