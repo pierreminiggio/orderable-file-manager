@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pminiggio/orderable-file-manager.git"
+    "url": "git+https://github.com/pierreminiggio/orderable-file-manager.git"
   },
   "author": "Pierre MINIGGIO",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pminiggio/orderable-file-manager/issues"
+    "url": "https://github.com/pierreminiggio/orderable-file-manager/issues"
   },
-  "homepage": "https://github.com/pminiggio/orderable-file-manager#readme",
+  "homepage": "https://github.com/pierreminiggio/orderable-file-manager#readme",
   "devDependencies": {
-    "add-instance-proto": "github:pminiggio/add-instance-proto",
-    "ajax-as-promise": "github:pminiggio/ajax-as-promise",
+    "add-instance-proto": "github:pierreminiggio/add-instance-proto",
+    "ajax-as-promise": "github:pierreminiggio/ajax-as-promise",
     "jest": "^24.9.0"
   }
 }

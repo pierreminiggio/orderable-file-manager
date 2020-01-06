@@ -8,7 +8,7 @@ Par la suite on pourra ordonner les fichiers et utiliser le file manager comme u
 
 Installation :
 ```
-npm install pminiggio/orderable-file-manager
+npm install pierreminiggio/orderable-file-manager
 ```
 
 Utilisation : 
