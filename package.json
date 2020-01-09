@@ -4,6 +4,7 @@
   "description": "Handle the front end of displaying, adding, removing, and ordering a list of files",
   "main": "lib/main.js",
   "scripts": {
+    "build": "webpack",
     "test": "jest"
   },
   "repository": {
@@ -22,7 +23,13 @@
     "@pierreminiggio/ajax-as-promise": "github:pierreminiggio/ajax-as-promise"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "babel-loader": "^7.1.2",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "jest": "^24.9.0",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "webpack": "^3.8.1"
   },
   "directories": {
     "lib": "lib"
