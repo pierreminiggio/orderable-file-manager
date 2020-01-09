@@ -5,7 +5,7 @@ $scannedFiles = scandir(__DIR__ . '/files');
 foreach ($scannedFiles as $scannedFile) {
 	if ($scannedFile !== '.' && $scannedFile !== '..') {
 		$file = (object)[
-			'id' => $scannedFile,
+			'id' => hash('tiger192,3', $scannedFile),
 			'name' => $scannedFile,
 			'url' => 'files/' . $scannedFile,
 			'delete_url' => 'delete.php?file=' . $scannedFile
