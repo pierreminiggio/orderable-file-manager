@@ -1,7 +1,7 @@
 <?php
 
 $files = [];
-$scannedFiles = scandir('files');
+$scannedFiles = scandir(__DIR__ . '/files');
 foreach ($scannedFiles as $scannedFile) {
 	if ($scannedFile !== '.' && $scannedFile !== '..') {
 		$file = (object)[
