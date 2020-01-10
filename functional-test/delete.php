@@ -1,6 +1,12 @@
 <?php
 
-$file = $_GET['file'];
-unlink(__DIR__ . '/files/' . $file);
+$file = __DIR__ . '/files/' . $_GET['file'];
 
-echo json_encode(['success' => 1, 'file' => $file]);
+if (! file_exists($file)) {
+    echo json_encode(['error' => 1]);
+    die();
+}
+
+unlink($file);
+
+echo json_encode(['success' => 1]);
