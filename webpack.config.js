@@ -8,7 +8,7 @@ module.exports = {
   entry: {
     'main': './lib/main.js',
     'OrderableFileManagerInstance': './lib/OrderableFileManagerInstance.js',
-    'test': './lib/test.js',
+    'demo': './lib/demo.js',
   },
   //devtool: 'source-map',
   output: {
