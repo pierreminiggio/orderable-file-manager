@@ -1,7 +1,11 @@
 <?php
 
 $files = [];
-$scannedFiles = scandir(__DIR__ . '/files');
+$folderPath = __DIR__ . '/files';
+if (! file_exists($folderPath)) {
+	mkdir($folderPath, 0777);
+}
+$scannedFiles = scandir($folderPath);
 foreach ($scannedFiles as $scannedFile) {
 	if ($scannedFile !== '.' && $scannedFile !== '..') {
 		$file = (object)[
