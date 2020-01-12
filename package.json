@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/pierreminiggio/orderable-file-manager#readme",
   "dependencies": {
-    "@pierreminiggio/binary-url-reader": "github:pierreminiggio/binary-url-reader",
     "@pierreminiggio/add-instance-proto": "github:pierreminiggio/add-instance-proto",
-    "@pierreminiggio/ajax-as-promise": "github:pierreminiggio/ajax-as-promise"
+    "@pierreminiggio/ajax-as-promise": "github:pierreminiggio/ajax-as-promise",
+    "@pierreminiggio/binary-url-reader": "github:pierreminiggio/binary-url-reader"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
