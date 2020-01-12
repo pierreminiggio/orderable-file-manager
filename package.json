@@ -20,7 +20,8 @@
   "dependencies": {
     "@pierreminiggio/add-instance-proto": "github:pierreminiggio/add-instance-proto",
     "@pierreminiggio/ajax-as-promise": "github:pierreminiggio/ajax-as-promise",
-    "@pierreminiggio/binary-url-reader": "github:pierreminiggio/binary-url-reader"
+    "@pierreminiggio/binary-url-reader": "github:pierreminiggio/binary-url-reader",
+    "@pierreminiggio/sass-helpers": "github:pierreminiggio/sass-helpers"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
