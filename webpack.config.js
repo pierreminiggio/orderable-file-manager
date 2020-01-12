@@ -6,14 +6,14 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   entry: {
-    'main': './lib/main.js',
-    'OrderableFileManagerInstance': './lib/OrderableFileManagerInstance.js',
-    'demo': './lib/demo.js',
+    'main': './src/js/main.js',
+    'OrderableFileManagerInstance': './src/js/OrderableFileManagerInstance.js',
+    'demo': './src/js/demo.js',
   },
   //devtool: 'source-map',
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'public/js'),
     library: "OrderableFileManager",
     libraryExport: 'default',
     libraryTarget: "umd"
@@ -21,7 +21,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.js$/,
-      exclude: /(node_modules|bower_components)/,
+      exclude: /node_modules/,
       use: {
         loader: 'babel-loader'
       }
@@ -34,7 +34,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new CleanWebpackPlugin(['public']),
+    new CleanWebpackPlugin(['public/css']),
     new ExtractTextPlugin({
       filename:  (getPath) => {
         return getPath('[name].css');

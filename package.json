@@ -2,7 +2,7 @@
   "name": "@pierreminiggio/orderable-file-manager",
   "version": "1.0.0",
   "description": "Handle the front end of displaying, adding, removing, and ordering a list of files",
-  "main": "lib/main.js",
+  "main": "src/js/main.js",
   "scripts": {
     "build": "webpack",
     "test": "jest"

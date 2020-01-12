@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10915,6 +10915,110 @@ class BinaryUrlReader
 
 module.exports = new BinaryUrlReader
 
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+let addInstancesProto = __webpack_require__(5);
+
+const OrderableFileManagerInstance = __webpack_require__(1);
+
+let OrderableFileManagerSingleton = function () {
+    let buildInstance = function () {
+
+        this.load = function (querySelector = '.orderable-file-manager', customParams = {}) {
+            let singleton = this;
+            let elements = document.querySelectorAll(querySelector);
+            if (elements.length > 0) {
+                let element = null;
+                for (let i = 0; i < elements.length; i++) {
+                    element = elements[i];
+                    if (element.dataset.loaded === undefined) {
+                        let identifier = singleton.createInstanceIdentifier(element);
+                        singleton.loadedInstances[identifier] = new OrderableFileManagerInstance(element, customParams);
+                        singleton.loadedInstances[identifier].load();
+                        element.dataset.loaded = 1;
+                    }
+                }
+            }
+        };
+    };
+
+    let instance = null;
+    return new function () {
+        this.getInstance = function () {
+            if (instance === null) {
+                instance = new buildInstance();
+                instance.buildInstance = null;
+            }
+            return instance;
+        };
+    }();
+}();
+
+let OrderableFileManager = OrderableFileManagerSingleton.getInstance();
+addInstancesProto(OrderableFileManager);
+
+module.exports = OrderableFileManager;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const $ = __webpack_require__(0)
+
+let addInstancesProto = function (obj) {
+    let instanceProto = obj.__proto__
+
+    // Instances
+    instanceProto.loadedInstances = []
+
+    // Getter All
+    instanceProto.getAll = function () {
+        return this.loadedInstances
+    }
+
+    // Getter
+    instanceProto.get = function (id) {
+        if (this.loadedInstances[id] !== undefined) {
+            return this.loadedInstances[id]
+        }
+        return null
+    }
+
+    // Création des identifiants des instances, basées sur les ID
+    instanceProto.lastId = 1
+    instanceProto.createInstanceIdentifier = function (jquerySelector, prefix = 'no-id-') {
+        let singleton = this
+
+        let identifier = ''
+
+        // Il a un id, on l'utilise
+        if ($(jquerySelector).attr('id') !== undefined && $(jquerySelector).attr('id') !== '') {
+            identifier = $(jquerySelector).attr('id')
+        }
+
+        // Sinon, on récupère le dernier premier numéro disponible
+        else {
+            Object.keys(singleton.loadedInstances).forEach(function (entry) {
+                if (entry.startsWith(prefix)) {
+                    currentId = parseInt(entry.substring(prefix.length))
+                    if (currentId >= singleton.lastId) {
+                        singleton.lastId = currentId+1
+                    }
+                }
+            })
+            identifier = prefix+singleton.lastId
+        }
+
+        return identifier
+    }
+
+    return obj
+}
+
+module.exports = addInstancesProto
 
 /***/ })
 /******/ ])["default"];
