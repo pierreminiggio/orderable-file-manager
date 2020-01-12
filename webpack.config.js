@@ -9,8 +9,8 @@ module.exports = {
     'main': './src/js/main.js',
     'OrderableFileManagerInstance': './src/js/OrderableFileManagerInstance.js',
     'demo': './src/js/demo.js',
+    'OrderableFileManager': './src/sass/main.scss'
   },
-  //devtool: 'source-map',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'public/js'),
@@ -26,10 +26,10 @@ module.exports = {
         loader: 'babel-loader'
       }
     },{
-      test: /\.less$/,
+      test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         fallback: "style-loader",
-        use: ['css-loader','less-loader']
+        use: ['css-loader','sass-loader']
       })
     }]
   },
