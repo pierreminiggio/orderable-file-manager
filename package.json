@@ -20,16 +20,22 @@
   "dependencies": {
     "@pierreminiggio/add-instance-proto": "github:pierreminiggio/add-instance-proto",
     "@pierreminiggio/ajax-as-promise": "github:pierreminiggio/ajax-as-promise",
-    "@pierreminiggio/binary-url-reader": "github:pierreminiggio/binary-url-reader",
-    "webpack-cli": "^3.3.10"
+    "@pierreminiggio/binary-url-reader": "github:pierreminiggio/binary-url-reader"
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
-    "babel-minify-webpack-plugin": "^0.2.0",
+    "babel-minify-webpack-plugin": "^0.3.1",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^3.4.2",
+    "fibers": "^4.0.2",
     "jest": "^24.9.0",
-    "webpack": "^4.36.0"
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "sass": "^1.24.4",
+    "sass-loader": "^8.0.1",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.36.0",
+    "webpack-cli": "^3.3.10"
   },
   "directories": {
     "lib": "lib"
