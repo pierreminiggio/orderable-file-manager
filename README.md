@@ -2,11 +2,11 @@ Ce package permet de lister, ajouter et supprimer des fichiers en Ajax
 
 Pour le moment c'est très barebone avec aucun CSS
 
-<img src="https://miniggiodev.fr/packages/orderable-file-manager/barebone-html.png">
+<img src="https://old.miniggiodev.fr/packages/orderable-file-manager/barebone-html.png">
 
 Par la suite on pourra ordonner les fichiers et utiliser le file manager comme un sélecteur de fichier pour un input html via une popin.
 
-Demo dispo via un git clone, puis en ouvrant le fichier functional-test/index.html
+Demo avec un backend très simple dispo via un git clone, puis en ouvrant le fichier functional-test/index.html via un serveur web PHP
 
 Installation :
 ```
