@@ -6,6 +6,8 @@ Pour le moment c'est très barebone avec aucun CSS
 
 Par la suite on pourra ordonner les fichiers et utiliser le file manager comme un sélecteur de fichier pour un input html via une popin.
 
+Demo dispo via un git clone, puis en ouvrant le fichier functional-test/index.html
+
 Installation :
 ```
 npm install pierreminiggio/orderable-file-manager
