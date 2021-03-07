@@ -1,5 +1,5 @@
-const Ajax = require('@pierreminiggio/ajax-as-promise')
-const BinaryUrlReader = require('@pierreminiggio/binary-url-reader')
+import Ajax from '@pierreminiggio/ajax-as-promise'
+import BinaryUrlReader from '@pierreminiggio/binary-url-reader'
 
 class OrderableFileManager
 {
@@ -171,4 +171,4 @@ class OrderableFileManager
 	}
 }
 
-module.exports = OrderableFileManager
+export default OrderableFileManager

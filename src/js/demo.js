@@ -1,2 +1,2 @@
-const OrderableFileManager = require('./main.js')
+import OrderableFileManager from './main.js'
 OrderableFileManager.load()

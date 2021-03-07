@@ -1,6 +1,5 @@
-let addInstancesProto = require('@pierreminiggio/add-instance-proto')
-
-const OrderableFileManagerInstance = require('./OrderableFileManagerInstance')
+import addInstancesProto from '@pierreminiggio/add-instance-proto'
+import OrderableFileManagerInstance from './OrderableFileManagerInstance.js'
 
 let OrderableFileManagerSingleton = (function () {
     let buildInstance = function () {
@@ -35,7 +34,7 @@ let OrderableFileManagerSingleton = (function () {
     }
 })()
 
-let OrderableFileManager = OrderableFileManagerSingleton.getInstance()
+const OrderableFileManager = OrderableFileManagerSingleton.getInstance()
 addInstancesProto(OrderableFileManager)
 
-module.exports = OrderableFileManager
+export default OrderableFileManager

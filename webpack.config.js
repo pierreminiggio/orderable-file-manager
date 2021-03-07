@@ -1,10 +1,15 @@
-const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const MinifyPlugin = require('babel-minify-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const isDevelopment = process.env.NODE_ENV === 'development'
+import {dirname, resolve} from 'path'
+import {fileURLToPath} from 'url'
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
-module.exports = {
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import MinifyPlugin from 'babel-minify-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+const devMode = 'development'
+const isDevelopment = process.env.NODE_ENV === devMode
+const mode = isDevelopment ? devMode : 'production'
+
+export default {
   entry: {
     'main': './src/js/main.js',
     'OrderableFileManagerInstance': './src/js/OrderableFileManagerInstance.js',
@@ -13,11 +18,12 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'public'),
+    path: resolve(__dirname, 'public'),
     library: "OrderableFileManager",
     libraryExport: 'default',
     libraryTarget: "umd"
   },
+  mode,
   module: {
     rules: [
       {
@@ -29,36 +35,22 @@ module.exports = {
       },
       {
         test: /\.module\.s(a|c)ss$/,
-        loader: [
-          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              sourceMap: isDevelopment
-            }
-          },
-          {
+        use: [isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', {
             loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment
             }
-          }
-        ]
+          }]
       },
       {
-        test: /\.s(a|c)ss$/,
+        test: /\.s[ac]ss$/i,
         exclude: /\.module.(s(a|c)ss)$/,
-        loader: [
-          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          {
+        use: [isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', {
             loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment
             }
-          }
-        ]
+          }]
       }
     ]
   },
@@ -66,7 +58,7 @@ module.exports = {
       extensions: ['.js', '.scss']
   },
   plugins: [
-    new CleanWebpackPlugin(['public']),
+    new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: ['public']}),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
