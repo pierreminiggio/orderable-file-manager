@@ -7,6 +7,6 @@ if (! empty($file['error'])) {
     die();
 }
 
-rename($file['tmp_name'], __DIR__ . '/files/' . $file['name']);
+rename($file['tmp_name'], __DIR__ . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . $file['name']);
 
 echo json_encode(['success' => 1, 'file' => $file['name']]);
